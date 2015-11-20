@@ -5,9 +5,9 @@ namespace andres\videoclubBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use andres\videoclubBundle\Entity\Peliculas;
-use andres\videoclubBundle\Entity\PeliculasRepository;
-use andres\videoclubBundle\Form\PeliculasType;
+use andres\videoBundle\Entity\Peliculas;
+use andres\videoBundle\Entity\PeliculasRepository;
+use andres\videoBundle\Form\PeliculasType;
 
 
 class PeliculasController extends Controller
