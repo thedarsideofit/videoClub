@@ -19,10 +19,10 @@ class PeliculasController extends Controller
     {
         $peliculas = new Peliculas();
        
-        $repository = $this->getDoctrine()->getRepository("videoBundle:Peliculas");
+        $pelis = $this->getDoctrine()->getRepository("videoBundle:Peliculas");
    
 
-        return $this->render('videoBundle:Peliculas:verTodas.html.twig', array('peliculas' => $peliculas));
+        return $this->render('videoBundle:Peliculas:verTodas.html.twig', array('pelis' => $pelis));
 
         
     }
