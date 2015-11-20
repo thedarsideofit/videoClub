@@ -1,0 +1,65 @@
+
+#rutas de login 
+video_index:
+    path:     /index
+    defaults: { _controller: videoBundle:User:index }
+
+video_login:
+    path:     /login
+    defaults: { _controller: videoBundle:User:login }
+
+
+video_logout:
+    path:     /logout
+    defaults: { _controller: videoBundle:User:logout }
+
+#rutas de usuarios
+
+video_usAdd:
+    path:     /usAdd
+    defaults: { _controller: videoBundle:User:usAdd }
+
+video_usCrear:
+    path:     /usCrear 
+    defaults: { _controller: videoBundle:User:usCrear }
+    methods: POST
+
+video_usEdit:
+    path:     /user/edit/{id}
+    defaults: { _controller: videoBundle:User:edit }
+
+video_usView:
+    path:     /user/view/{id}
+    defaults: { _controller: videoBundle:User:view }
+
+video_usDelete:
+    path:     /user/delete/{id}
+    defaults: { _controller: videoBundle:Peliculas:delete }
+
+#rutas de peliculas
+
+video_verTodas:
+    path:     /verTodas
+    defaults: { _controller: videoBundle:Peliculas:verTodas }
+
+
+video_peAdd:
+    path:     /peAdd
+    defaults: { _controller: videoBundle:Peliculas:peAdd }
+
+video_peCrear:
+    path:     /peCrear 
+    defaults: { _controller: videoBundle:Peliculas:peCrear }
+    methods: POST
+
+#rutas Recargas
+
+video_recarga:
+    path:     /recarga
+    defaults: { _controller: videoBundle:Recargas:recarga }
+
+video_reCrear:
+    path:     /reCrear 
+    defaults: { _controller: videoBundle:Recargas:reCrear }
+    methods: POST
+

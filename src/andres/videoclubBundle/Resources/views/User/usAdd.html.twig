@@ -1,0 +1,68 @@
+{% extends  'principal.html.twig' %}
+
+
+
+{% block body %}
+
+	
+			<div class="col-md-6">
+
+				<div class="page-header">
+					<br>
+					<h4 style = "color:white" class="modal-title" id="myModalLabel"> Registro De Usuarios: </h4>	
+				</div>
+
+				{{ form_start(form, {'attr':{'roll':'form'} } ) }}
+
+             <div style = "color:white" class="form-group">
+                    {{ form_label(form.username) }}
+                    {{ form_widget(form.username, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.username) }}</span>
+                </div>
+
+			    <div style = "color:white" class="form-group">
+			        {{ form_label(form.password) }}
+			        {{ form_widget(form.password, {'attr': {'class': 'form-control', 'placeholder' : 'Tu Contraseña'}}) }}
+			        <span class="text-danger">{{ form_errors(form.password) }}</span>
+			    </div>
+
+			   	<div style = "color:white"  class="form-group">
+			        {{ form_label(form.nombre) }}
+			        {{ form_widget(form.nombre, {'attr': {'class': 'form-control', 'placeholder' : 'Tu nombre '}}) }}
+			        <span class="text-danger">{{ form_errors(form.nombre) }}</span>
+			    </div>
+
+			    <div style = "color:white" class="form-group">
+			        {{ form_label(form.apellido) }}
+			        {{ form_widget(form.apellido, {'attr': {'class': 'form-control', 'placeholder' : 'Tu apellido'}}) }}
+			        <span class="text-danger">{{ form_errors(form.apellido) }}</span>
+			    </div>
+				
+				<div style = "color:white" class="form-group">
+			        {{ form_label(form.dni) }}
+			        {{ form_widget(form.dni, {'attr': {'class': 'form-control', 'placeholder' : 'Tu dni '}}) }}
+			        <span class="text-danger">{{ form_errors(form.dni) }}</span>
+			    </div>
+
+
+			    <div style = "color:white" class="form-group">
+			        {{ form_label(form.email) }}
+			        {{ form_widget(form.email, {'attr': {'class': 'form-control', 'placeholder' : 'Tu Email '}}) }}
+			        <span class="text-danger">{{ form_errors(form.email) }}</span>
+			    </div>
+
+			 
+			    
+
+
+		    <p>
+		        {{ form_widget(form.save, {'label' : 'Crear U suario', 'attr': {'class': 'btn btn-success'}}) }}
+		    </p>                
+        
+
+
+			{{ form_end (form)}}
+
+	</div>
+		
+{% endblock %}

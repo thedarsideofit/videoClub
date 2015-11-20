@@ -1,0 +1,13 @@
+video:
+    resource: "@videoBundle/Resources/config/routing.yml"
+    prefix:   /
+
+
+
+aplicacion:
+    resource: "@aplicacionBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation

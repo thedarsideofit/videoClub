@@ -1,0 +1,161 @@
+{% extends  'principal.html.twig' %}
+
+
+{% block body %}
+
+
+  <div class="container">
+    
+     
+    <div class="header-top-right">
+       
+              <!-- /.modal --> 
+              <!-- Button trigger modal  --> 
+             
+              <div id="small-dialog1" class="mfp-hide"> </div>  
+          
+              
+
+      
+    </div>
+      <div class="clearfix"></div>
+       </div>  
+    </div>  
+<div class="container">
+          <div class="main-content">
+    <div class="header">
+              <div class="logo">
+                <h1>Bienvenidos al sistema de Recargas de Creditos de PLAYPAY   !!!</h1> 
+                
+                </a> </div>
+              <div class="search">
+       
+              </div>
+    
+
+     <div class="col-md-6">
+
+        <div class="page-header">
+          <br>
+          <h4 style = "color:white" class="modal-title" id="myModalLabel">  Ingrese los datos de su Tarjeta de Credito: </h4>  
+        </div>
+
+        {{ form_start(form, {'attr':{'roll':'form'} } ) }}
+
+
+          <div style = "color:white" class="form-group">
+                    {{ form_label(form.descripcion) }}
+                    {{ form_widget(form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.descripcion) }}</span>
+                </div>
+
+          <div style = "color:white" class="form-group">
+                    {{ form_label(form.monto) }}
+                    {{ form_widget(form.monto, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.monto) }}</span>
+                </div>
+
+  
+
+      
+        <p>  {{ form_widget(form.save) }} </p>                
+        
+      {{ form (form)}}
+
+     <div class="bkng-tb-cntnt">
+      <div class="pymnts">
+       <form action="#" method="POST" id="payment-form">
+         <input type="hidden" name="token_id" id="token_id">
+           <div class="pymnt-itm card active">
+             <div class="pymnt-cntnt">
+                <div class="card-expl">
+                     <div class="credit"><h4>Tarjetas de crédito</h4></div>
+                     <div class="debit"><h4>Nombre de la Tarjeta</h4></div>
+                 </div>
+                 <div class="sctn-row">
+                      <div class="sctn-col l">
+                          <label>Nombre de la Tarjeta:</label> {{ form_label(form.descripcion) }}
+                    {{ form_widget(form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                      </div>
+                      <div class="sctn-col">
+                       <label>Monto a Cargar</label><input type="text" autocomplete="off" placeholder="Ingrese el monto a cargar" data-openpay-card="card_number">
+                      </div>
+                  </div>
+                   <div class="sctn-row">
+                      <div class="sctn-col l">
+                          <label>Nombre del titular</label><input type="text" placeholder="Como aparece en la tarjeta" autocomplete="off" data-openpay-card="holder_name">
+                      </div>
+                      <div class="sctn-col">
+                       <label>Número de tarjeta</label><input type="text" autocomplete="off"  placeholder="Como aparece en la tarjeta" data-openpay-card="card_number">
+                      </div>
+                  </div>
+              <div class="sctn-row">
+                                <div class="sctn-col l">
+                                    <label>Fecha de expiración</label>
+                                    <div class="sctn-col half l"><input type="text" placeholder="Mes" data-openpay-card="expiration_month"></div>
+                                    <div class="sctn-col half l"><input type="text" placeholder="Año" data-openpay-card="expiration_year"></div>
+                                </div>
+                                <div class="sctn-col cvv"><label>Código de seguridad</label>
+                                    <div class="sctn-col half l"><input type="text" placeholder="3 dígitos" autocomplete="off" data-openpay-card="cvv2"></div>
+                                </div>
+                            </div>
+                            <div class="openpay"><div class="logo">Transacciones realizadas vía:</div>
+                            <div class="shield">Tus pagos se realizan de forma segura con encriptación de 256 bits</div>
+                        </div>
+                        <div class="sctn-row">
+                                <a class="button rght" id="pay-button">Pagar</a>
+                        </div>
+
+                </div>
+            </div>
+          </form>
+        </div>
+    </div>
+</body> 
+
+    </div>
+
+
+    <div class="clearfix"></div>
+    </div>
+    <p class="te" >Compra Tus Creditos y alquilá las mejores películas de forma online en PLAYPAY </p>
+    <br>
+       
+
+  
+
+  </div>
+          <div class="footer">
+    <div class="clearfix"></div>
+    <div class="col-md-12">
+              <div class="footer-right">
+        		<div class="follow-us">
+                  <h5 class="f-head">PENSAMIENTO INDEPENDIENTE 2015<br><br>Seguinos en nuestras redes sociales !!!</h5>
+                  <ul class="social-icons">
+            		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            		<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            		<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         		  </ul>
+                 
+          		 </div><div class="clearfix"></div>
+      		  </div>
+     	</div>
+    		<div class="clearfix"></div>
+  	</div>
+          	<div class="clearfix"></div>
+        	</div>
+				<div class="copy-rights text-center">
+          			<p> Derechos Reservados   © PENSAMIENTO INDEPENDIENTE 2015   </p>
+        		</div>
+</div>
+ 
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+
+
+
+{% endblock %}

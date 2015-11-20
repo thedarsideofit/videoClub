@@ -1,0 +1,63 @@
+{% extends  'principal.html.twig' %}
+
+
+
+{% block body %}
+
+	
+			<div class="col-md-6">
+
+				<div class="page-header">
+					<br>
+					<h4 style = "color:white" class="modal-title" id="myModalLabel"> Registro De Usuarios: </h4>	
+				</div>
+
+				{{ form_start(form, {'attr':{'roll':'form'} } ) }}
+
+                <div style = "color:white" class="form-group">
+                    {{ form_label(form.titulo) }}
+                    {{ form_widget(form.titulo, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.titulo) }}</span>
+                </div>
+
+			    <div style = "color:white" class="form-group">
+                    {{ form_label(form.genero) }}
+                    {{ form_widget(form.genero, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.genero) }}</span>
+                </div>
+
+                 <div style = "color:white" class="form-group">
+                    {{ form_label(form.descripcion) }}
+                    {{ form_widget(form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.descripcion) }}</span>
+                </div>
+
+                  <div style = "color:white" class="form-group">
+                    {{ form_label(form.precio) }}
+                    {{ form_widget(form.precio, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.precio) }}</span>
+                </div>
+
+
+                  <div style = "color:white" class="form-group">
+                    Fecha de Estreno
+                    {{ form_widget(form.anio, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Tu username'} }) }}
+                    <span class="text-danger">{{ form_errors(form.anio) }}</span>
+                </div>
+
+
+
+
+
+
+		    <p>
+		       {{ form_widget(form.save, {'label' : 'Crear U suario', 'attr': {'class': 'btn btn-success'}}) }}
+		    </p>                
+        
+
+
+			{{ form_end(form)}}
+
+	</div>
+		
+{% endblock %}

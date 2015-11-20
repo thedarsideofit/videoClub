@@ -1,0 +1,156 @@
+{% extends  'principal.html.twig' %}
+
+
+{% block body %}
+
+
+  <div class="header-top-strip">
+          <div class="container">
+    <div class="header-top-left">
+             <h2><p><a href="support.html">  <p> Hola <span class="label label-primary"> {{app.session.get('username')}} , </span>
+                Bienvenido !!!<br>
+                Su Saldo es  de   <span class="label label-primary"> {{app.session.get('saldo')}} </span> , Créditos <br>
+          <a href="{{path('video_logout')}}">  <p style="color:blue"> ---->Click para Cerrar Sesion</p>  </a>  
+          </p></a></p></h2>
+            <div id="small-dialog" class="mfp-hide">
+             
+          </div>
+    </div>
+     <div class="nav navbar-nav navbar-right">
+           <h1> PLAYPAY </h1> 
+           <div > <a href= 'index' class="btn btn-danger"> Volver a la Pagina principal </a> </div>
+          </div>
+            <div id="small-dialog" class="mfp-hide">
+             
+          </div>
+    </div>
+   
+      <div class="clearfix"></div>
+    </div>
+</div>
+     
+<div class="container">
+          <div class="main-content">
+    <div class="header">
+              <div class="logo">
+                <h1>Sistema de Recargas de Creditos de PLAYPAY!!!</h1> 
+                
+               </div>
+             
+
+     <div class="col-md-6">
+
+        <div class="page-header">
+          
+          <h4 style = "color:white" class="modal-title" id="myModalLabel">  Ingrese los datos de su Tarjeta de Credito: </h4>  
+        </div>
+
+
+
+        <div class="col-md-6">
+
+       
+
+        {{ form_start(form, {'attr':{'roll':'form'} } ) }}
+
+             <div style = "color:white" class="form-group">
+                   <h4 style = "color:white" class="modal-title" id="myModalLabel"> Nombre de Tarjeta </h4>  
+                   <h3 style = "color:black"> {{ form_widget(form.descripcion, { 'attr' : {'class' : 'form-control', 'placeholder' : 'Ej: Visa'} }) }}</h3>
+                    <span class="text-danger">{{ form_errors(form.descripcion) }}</span>
+                </div>
+
+          <div style = "color:white" class="form-group">
+              <h4 style = "color:white" class="modal-title" id="myModalLabel"> Monto a Cargar en $ </h4> 
+              <h3 style = "color:black">{{ form_widget(form.monto, {'attr': {'class': 'form-control', 'placeholder' : 'Ej: 40 $'}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.monto) }}</span>
+          </div>
+
+          <div style = "color:white"  class="form-group">
+               <h4 style = "color:white" class="modal-title" id="myModalLabel"> Numero de la Tarjeta </h4> 
+             <h3 style = "color:black"> {{ form_widget(form.numTarjeta, {'attr': {'class': 'form-control', 'placeholder' : 'Numero de su Tarjeta '}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.numTarjeta) }}</span>
+          </div>
+
+          <div style = "color:white" class="form-group">
+              <h4 style = "color:white" class="modal-title" id="myModalLabel"> Nombre del TItular </h4> 
+              <h3 style = "color:black">{{ form_widget(form.nombreTitular, {'attr': {'class': 'form-control', 'placeholder' : 'Como figura en la tarjeta'}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.nombreTitular) }}</span>
+          </div>
+        
+        <div style = "color:white" class="form-group">
+               <h4 style = "color:white" class="modal-title" id="myModalLabel"> Codigo de Seguridad  </h4> 
+              <h3 style = "color:black">{{ form_widget(form.codigoSeguridad, {'attr': {'class': 'form-control', 'placeholder' : 'Los 3 digitos al reverso de su tarjeta '}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.codigoSeguridad) }}</span>
+          </div>
+
+
+          <div style = "color:white" class="form-group">
+               <h4 style = "color:white" class="modal-title" id="myModalLabel"> Mes Expiracion </h4> 
+              <h3 style = "color:black">{{ form_widget(form.mesExpiracion, {'attr': {'class': 'form-control', 'placeholder' : 'Mes '}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.mesExpiracion) }}</span>
+
+                <h4 style = "color:white" class="modal-title" id="myModalLabel"> Anio Expiracion </h4> 
+              <h3 style = "color:black">{{ form_widget(form.anioExpiracion, {'attr': {'class': 'form-control', 'placeholder' : 'Año '}}) }}</h3>
+              <span class="text-danger">{{ form_errors(form.anioExpiracion) }}</span>
+          </div>
+
+       
+          
+
+
+        <p>
+            {{ form_widget(form.save, {'label' : '  REALIZAR LA RECARGA AHORA  ', 'attr': {'class': 'btn btn-success'}}) }}
+        </p>                
+        
+
+
+      {{ form_end (form)}}
+
+  </div>
+   
+    </div>
+
+
+    <div class="clearfix"></div>
+    </div>
+    <p class="te" >Compra Tus Creditos y alquilá las mejores películas de forma online en PLAYPAY </p>
+    <br>
+       
+
+  
+
+  </div>
+          <div class="footer">
+    <div class="clearfix"></div>
+    <div class="col-md-12">
+              <div class="footer-right">
+        		<div class="follow-us">
+                  <h5 class="f-head">PENSAMIENTO INDEPENDIENTE <br><br>Seguinos en nuestras redes sociales</h5>
+                  <ul class="social-icons">
+            		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            		<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            		<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         		  </ul>
+                 
+          		 </div><div class="clearfix"></div>
+      		  </div>
+     	</div>
+    		<div class="clearfix"></div>
+  	</div>
+          	<div class="clearfix"></div>
+        	</div>
+				<div class="copy-rights text-center">
+          			<p> Derechos Reservados   © PENSAMIENTO INDEPENDIENTE 2015   </p>
+        		</div>
+</div>
+ 
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+
+
+
+{% endblock %}

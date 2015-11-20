@@ -1,0 +1,202 @@
+  {% extends  'principal.html.twig' %}
+
+{% block head %}
+
+<!-- header-section-starts -->
+<div class="header-top-strip">
+          <div class="container">
+    <div class="header-top-left">
+             <h2><p><a href="support.html">  <p> Hola <span class="label label-primary"> {{app.session.get('username')}} , </span>
+              	Bienvenido !!!<br>
+                Su Saldo es  de   <span class="label label-primary"> {{app.session.get('saldo')}} </span> , Créditos <br>
+      		<a href="{{path('video_logout')}}">  <p style="color:blue"> ---->click para  CERRAR SESION</p>  </a>  
+  				</p></a></p></h2>
+      		  <div id="small-dialog" class="mfp-hide">
+       			 
+      		</div>
+    </div>
+     <div class="nav navbar-nav navbar-right">
+           <h1> PLAYPAY </h1> <br>
+           <div > <a href= 'recarga' class="btn btn-danger"> Click para Cargar Creditos </a> </div>
+            <div id="small-dialog" class="mfp-hide">
+             
+          </div>
+      </div>
+    <div class="header-top-right">
+       
+              <!-- /.modal --> 
+              <!-- Button trigger modal  --> 
+             
+              <div id="small-dialog1" class="mfp-hide"> </div>
+          
+              
+
+      
+    </div>
+      <div class="clearfix"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block body %}
+
+<div class="container">
+          <div class="main-content">
+    <div class="header">
+              <div class="logo"> <a href="index.html">
+                <h1>Bienvenidos a PLAYPAY !!!</h1>
+                </a> </div>
+             
+              <div class="clearfix"></div>
+            </div>
+    <div class="bootstrap_container">
+              <nav class="navbar navbar-default w3_megamenu" role="navigation">
+        <div class="navbar-header">
+                  <button type="button" data-toggle="collapse" data-target="#defaultmenu" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                  <a href="index.html" class="navbar-brand"><i class="fa fa-home"></i></a> </div>
+        <!-- end navbar-header -->
+        
+        <div  style = "background: " id="defaultmenu" class="navbar-collapse collapse">
+                  <ul  class="nav navbar-nav">
+            <li class="active"><a href="index"> Index </a></li>
+            <!-- Mega Menu -->
+            
+            
+                                <li class="#"><a href="index.html">Acerca De  </a></li>
+                                <li class="#"><a href="index.html">Categorias </a></li>
+                                <li class="#"><a href="index.html"> Ver Todas </a></li>
+                                <li class="#"><a href="index.html"> Ultimas </a></li>
+                             
+
+            
+                    
+            <!-- end standard drop down --> 
+            <!-- end dropdown w3_megamenu-fw -->
+          </ul>
+                  <!-- end nav navbar-nav -->
+                  
+                  <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Contacto<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                <li>
+                          <form id="contact1" action="#" name="contactform" method="post">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <input type="text" name="name" id="name1" class="form-control" placeholder="Name">
+                              <input type="text" name="email" id="email1" class="form-control" placeholder="Email">
+                            </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <input type="text" name="phone" id="phone1" class="form-control" placeholder="Phone">
+                              <input type="text" name="subject" id="subject1" class="form-control" placeholder="Subject">
+                            </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <textarea class="form-control" name="comments" id="comments1" rows="6" placeholder="Your Message ..."></textarea>
+                            </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                              <div class="pull-right">
+                        <input type="submit" value="SEND" id="submit1" class="btn btn-primary small">
+                      </div>
+                            </div>
+                    <div class="clearfix"></div>
+                  </form>
+                        </li>
+              </ul>
+                    </li>
+          </ul>
+          <span></span>
+          
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown"><a href="browes.html" >  Ayuda <b class="caret"></b></a>
+                   
+                    </li>
+          </ul>
+             </div>
+      
+      </nav>
+      
+            </div>
+    <br><br>
+    <p class="te">Compra Tus Creditos y alquilá las mejores películas de forma online en PLAYPAY </p>
+    <br>
+        <p class="co"> ¡¡¡¡¡¡Encontrá tus películas favoritas y  Miralas con la mejor calidad !!!!!! </p> <br><br>
+   
+
+
+
+
+
+
+    <div class="event-featured">
+              <h4>Películas mas Vistas: </h4>
+              <ul>
+        <li>
+                  <div class="ef-movie">
+            <div class="ef-movie-img"> <img src="images/1.jpg" alt="" /> </div>
+            <div class="ef-movie-name"> <a href="events.html">HairBrained</a>
+                      <p>2013</p>
+                    </div>
+            <div class="ef-buy-tickets"> <a href="movie-select-show.html">Downloads</a> </div>
+          </div>
+                </li>
+        <li>
+                  <div class="ef-movie">
+            <div class="ef-movie-img"> <img src="images/2.jpg" alt="" /> </div>
+            <div class="ef-movie-name"> <a href="events.html">Rudderless</a>
+                      <p>2014</p>
+                    </div>
+            <div class="ef-buy-tickets"> <a href="event-payment.html">Downloads</a> </div>
+          </div>
+                </li>
+        <li>
+                  <div class="ef-movie">
+            <div class="ef-movie-img"> <img src="images/3.jpg" alt="" /> </div>
+            <div class="ef-movie-name"> <a href="events.html">The Rise of the Krays</a>
+                      <p>2015</p>
+                    </div>
+            <div class="ef-buy-tickets"> <a href="event-payment.html">Downloads</a> </div>
+          </div>
+                </li>
+        <li> </li>
+ 
+        <li>
+                  
+                </li>
+        <div class="clearfix"></div>
+      </ul>
+  </div>
+
+  </div>
+          <div class="footer">
+    <div class="clearfix"></div>
+    <div class="col-md-12">
+              <div class="footer-right">
+        		<div class="follow-us">
+                  <h5 class="f-head">PENSAMIENTO INDEPENDIENTE 2015<br><br>Seguinos en nuestras redes sociales !!!</h5>
+                  <ul class="social-icons">
+            		<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+            		<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+            		<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+            		<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+            		<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+            		<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+         		  </ul>
+                 
+          		 </div><div class="clearfix"></div>
+      		  </div>
+     	</div>
+    		<div class="clearfix"></div>
+  	</div>
+          	<div class="clearfix"></div>
+        	</div>
+				<div class="copy-rights text-center">
+          			<p> Derechos Reservados   © PENSAMIENTO INDEPENDIENTE 2015   </p>
+        		</div>
+</div>
+
+<a href="#home" class="scroll" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+
+
+
+{% endblock %}

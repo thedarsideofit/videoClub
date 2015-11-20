@@ -1,0 +1,141 @@
+{% extends  'principal.html.twig' %}
+
+{% block body %}
+
+  {% for flashMessage in app.session.flashbag.get('mensaje') %}
+    <span class="alert-success">
+      {{ flashMessage }}
+      <hr/><br>
+    </span>
+    
+
+  {% endfor %}
+   <div class="logo"> <a href="index.html">
+     <h1>Bienvenidos a PLAYPAY !!!</h1></a> 
+   </div><br>
+    
+ 
+       <br><br>
+                 
+
+	<h2 style = "color:white"> Ingrese sus datos: </h2><br>
+
+<form class="form-horizontal"  role="form" method ="post" accion= "{{path('video_index')}}">
+  <div class="form-group">
+    <label for="inputUsername"  style = "color:white"class="col-sm-2 control-label">Nombre de Usuario</label>
+    <div class="col-sm-8">
+      <input type="username" class="form-control" id="inputUsername" name ="usuario"placeholder="Nombre de Usuario">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" style = "color:white" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-8">
+      <input type="password" class="form-control" id="inputPassword3" name="contraseña" placeholder="Password">
+    </div>
+
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-8">
+
+
+                <button type="submit" class="btn btn-primary" style= "background:blue" >  Ingresarr  </button></a>
+              <!--   <button  type="button" class="btn btn-primary"  data-toggle="modal"  data-target="#myModal" href= 'usAdd' >Registrarse </button>  --> 
+    </div>
+  </div>
+   <br><br>
+            
+</form>
+                            <div class="col-md-4">
+                              <p> Si aún no lo estás , registrate ahora de forma rápida y obtene 10 creditos de Regalo </p>
+                              <div class="btn-group btn-group-justified"> <a href= 'usAdd' class="btn btn-danger"> Registrarme </a> </div>
+                            </div>
+      
+              <!-- /.modal--> 
+              <!-- Button trigger modal  --> 
+             
+              <div id="small-dialog1" class="mfp-hide"> </div>
+           
+              <!-- Large modal -->
+          
+             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+           aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true"> &times;</button>
+                          <h4 class="modal-title" id="myModalLabel"> Registro De Usuarios !</h4>
+                        </div>
+                  <div class="modal-body">
+                      
+                      <div class="row">
+                      <div class="col-md-8" style="border-right: 1px dotted #C2C2C2;padding-right: 30px;"> 
+                          <!-- Nav tabs -->
+                           <ul class="nav nav-tabs">
+                         <li class="active"><a href="#Registration" data-toggle="tab">Ingrese sus Datos</a></li>
+                     
+                       
+                        </ul>
+                          <!-- Tab panes -->
+          <div class="tab-content">
+                        
+
+
+                         <div class="tab-pane active" id="Registration">
+                        <form role="form" class="form-horizontal">
+
+                          
+                              <div class="form-group">
+                                      <label for="email" class="col-sm-2 control-label"> Usuario</label>
+                                      <div class="col-sm-10">
+                                     <div class="row">
+                                       
+                                            <div class="col-md-10">
+                                        <input type="text" class="form-control" placeholder="Nombre de Usuario" />
+                                        </div>
+                                        </div>
+                                  </div>
+                                  </div>
+                              <div class="form-group">
+                                    <label for="email" class="col-sm-2 control-label"> Email</label>
+                                      <div class="col-sm-10">
+                                    <input type="email" class="form-control" id="email" placeholder="Email" />
+                                  </div>
+                                  </div>
+                             
+                              <div class="form-group">
+                                      <label for="password" class="col-sm-2 control-label"> Contraseña</label>
+                                      <div class="col-sm-10">
+                                    <input type="password" class="form-control" id="password" placeholder="Password" />
+                                  </div>
+                                  </div>
+                              <div class="row">
+                                    <div class="col-sm-2"> </div>
+                                     <div class="col-sm-10">
+                                    <button href="#Login"  type="button" class="btn btn-primary btn-sm"> Guardar & Continuar</button>
+                                 
+                                  </div>
+                                  </div>
+                            </form>
+                            </div>
+
+                     </div>
+                        <div id="OR" class="hidden-xs"> OR</div>
+                   </div>
+                <div class="col-md-4">
+                          <div class="row text-center sign-with">
+                    <div class="col-md-12">
+                              <h3 class="other-nw"> Registrate Con:</h3>
+                            </div>
+                         <div class="col-md-12">
+                              <div class="btn-group btn-group-justified"> <a href="#" class="btn btn-primary">Facebook</a> <a href="#" class="btn btn-danger"> Google +</a> </div>
+                            </div>
+                     </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+      </div>
+   </div>
+           
+   </div>
+{% endblock %}
