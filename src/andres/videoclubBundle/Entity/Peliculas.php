@@ -1,6 +1,6 @@
 <?php
 
-namespace andres\videoclubBundle\Entity;
+namespace andres\videoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\Common\Collections\ArrayCollection;
